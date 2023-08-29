@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const API = axios.create({ baseURL: `http://localhost:5500/` });
-const API = axios.create({ baseURL: `https://youtubeclone5031.herokuapp.com/` });
+ const API = axios.create({ baseURL: `http://localhost:5000/` });
+//const API = axios.create({ baseURL: `https://youtubeclone5031.herokuapp.com/` });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("Profile")) {
@@ -12,7 +12,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-export const login = (authData) => API.post("/user/login", authData);
+export const login = (authData) => API.post('/user/login', authData);
 export const updateChanelData = (id, updateData) =>
   API.patch(`/user/update/${id}`, updateData);
 export const fetchAllChanel = () => API.get("/user/getAllChanels");

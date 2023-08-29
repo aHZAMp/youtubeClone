@@ -6,11 +6,13 @@ function ShowVideo({vid}) {
   console.log(vid)
   return (
     <>
-     <Link to={`/videopage/${vid?._id}`}>
+       <Link to={`/videopage/${vid?._id}`}>
         <video 
-        // src={`http://localhost:5500/${vid.filePath}`}
-        src={`https://youtubeclone5031.herokuapp.com/${vid.filePath}`}
+        //src={`${vid?.video_src}`}
+         src={`http://localhost:5000/${vid.filePath}`}
+        //src={`https://youtubeclone5031.herokuapp.com/${vid.filePath}`}
         className="video_ShowVideo"
+        
         />
      </Link>
      <div className='video_description'>

@@ -12,7 +12,7 @@ const [seachListA, setSeachList] = useState(false)
 const TitleArray = useSelector(s=>s?.videoReducer)
 ?.data?.filter(q=> q?.videoTitle.toUpperCase().includes(searchQuery?.toUpperCase())).map(m=>m?.videoTitle)
 // console.log(TitleArray)
-// const TitleArray=["video1","Video2","Animation video","Movies"].filter(q=>q.toUpperCase().includes(searchQuery.toUpperCase()));
+ //const TitleArray=["video1","Video2","Animation video","Movies"].filter(q=>q.toUpperCase().includes(searchQuery.toUpperCase()));
  return (
     <>
       <div className="SearchBar_Container">
